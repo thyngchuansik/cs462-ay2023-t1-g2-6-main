@@ -1,0 +1,101 @@
+datetime,bus,country,date,lat,location,long,postalCode,result,timestamp
+Mon Oct 09 2023 19:42:10 GMT+0800 (Singapore Standard Time),877,Singapore,9/10/2023,1.380005,101 Senja Rd,103.762093,,Overhanging Branch,1696880530
+Mon Oct 16 2023 06:39:01 GMT+0800 (Singapore Standard Time),669,Singapore,16/10/2023,1.30619,"International Building 360 Orchard Rd, 238869",103.83108,,Overhanging Branch,1697438341
+Fri Oct 20 2023 11:08:43 GMT+0800 (Singapore Standard Time),779,Singapore,20/10/2023,1.293064,9 Raffles Boulevard,103.858568,,Overhanging Branch,1697800123
+Wed Oct 18 2023 10:16:34 GMT+0800 (Singapore Standard Time),138,Singapore,18/10/2023,1.306762,1 Tanglin Road #01-01 Orchard Parade Hotel Singapore,103.827793,,Overhanging Branch,1697624194
+Tue Oct 17 2023 09:22:01 GMT+0800 (Singapore Standard Time),955,Singapore,17/10/2023,1.30159,"Javiers Rotisserie & Salad Bar, #B1-03/04/05 Cathay Cineleisure Orchard, 8 Grange Rd.",103.83646,,Overhanging Branch,1697534521
+Tue Oct 10 2023 11:34:30 GMT+0800 (Singapore Standard Time),890,Singapore,10/10/2023,1.338205,Lornie Rd,103.819871,,Overhanging Branch,1696937670
+Wed Oct 18 2023 21:28:28 GMT+0800 (Singapore Standard Time),150,Singapore,18/10/2023,1.293064,9 Raffles Boulevard,103.858568,,Overhanging Branch,1697664508
+Sun Oct 22 2023 00:45:57 GMT+0800 (Singapore Standard Time),25,Singapore,22/10/2023,1.296601,"36 Purvis Street, #05-05. Singapore 188613",103.854944,,Overhanging Branch,1697935557
+Sat Oct 21 2023 08:43:32 GMT+0800 (Singapore Standard Time),21,Singapore,21/10/2023,1.317711,Thomson Rd,103.843491,,Overhanging Branch,1697877812
+Fri Oct 20 2023 07:53:52 GMT+0800 (Singapore Standard Time),529,Singapore,20/10/2023,1.25557,Sentosa Island,103.819385,,Overhanging tree,1697788432
+Sat Oct 21 2023 17:35:16 GMT+0800 (Singapore Standard Time),588,Singapore,21/10/2023,1.277942,"50 Craig Road, #01-01",103.842172,,Overhanging Branch,1697909716
+Thu Oct 19 2023 09:29:49 GMT+0800 (Singapore Standard Time),389,Singapore,19/10/2023,1.369047,151 Serangoon North Avenue 2,103.874036,,Overhanging Branch,1697707789
+Wed Oct 18 2023 22:40:33 GMT+0800 (Singapore Standard Time),171,Singapore,18/10/2023,1.280826,"138 Cecil St, #01-01, Singapore 069538",103.848885,,Overhanging Branch,1697668833
+Thu Oct 12 2023 00:44:58 GMT+0800 (Singapore Standard Time),96,Singapore,12/10/2023,1.271278,109 Mount Faber,103.8193,,Overhanging Branch,1697071498
+Fri Oct 20 2023 00:35:28 GMT+0800 (Singapore Standard Time),806,Singapore,20/10/2023,1.291964,"Nantsuttei, #03-02 Millenia Walk, Parco Marina Bay, 9 Raffles Blvd.",103.860358,,Overhanging Branch,1697762128
+Fri Oct 13 2023 04:55:15 GMT+0800 (Singapore Standard Time),133,Singapore,13/10/2023,1.271273,109 Mount Faber,103.819299,,Overhanging Branch,1697172915
+Mon Oct 09 2023 15:42:52 GMT+0800 (Singapore Standard Time),469,Singapore,9/10/2023,1.339578,"1, Jurong West Central 2, #02-24, Jurong Point Shopping Centre, Singapore 648886",103.706714,,Overhanging Branch,1696866172
+Fri Oct 20 2023 11:51:10 GMT+0800 (Singapore Standard Time),224,Singapore,20/10/2023,1.313798,3155 Commonwealth Ave W,103.76566,,Overhanging Branch,1697802670
+Sun Oct 15 2023 10:37:29 GMT+0800 (Singapore Standard Time),363,Singapore,15/10/2023,1.296864,501 Stirling Rd,103.800775,,Overhanging Branch,1697366249
+Mon Oct 23 2023 21:06:32 GMT+0800 (Singapore Standard Time),884,Singapore,23/10/2023,1.280826,"138 Cecil St, #01-01, Singapore 069538",103.848885,,Overhanging tree,1698095192
+Wed Oct 18 2023 20:45:25 GMT+0800 (Singapore Standard Time),929,Singapore,18/10/2023,1.303795,"290 Orchard Road, #15-07/08, Paragon 238859",103.835853,,Overhanging Branch,1697661925
+Wed Oct 18 2023 11:05:39 GMT+0800 (Singapore Standard Time),460,Singapore,18/10/2023,1.430131,930 Yishun Avenue 2,103.835521,,Overhanging Branch,1697627139
+Mon Oct 16 2023 06:12:26 GMT+0800 (Singapore Standard Time),22,Singapore,16/10/2023,1.2933,1 Raffles Boulevard,103.85731,,Overhanging tree,1697436746
+Sat Oct 14 2023 03:50:35 GMT+0800 (Singapore Standard Time),494,Singapore,14/10/2023,1.309637,19 Desker Rd,103.854296,,Overhanging Branch,1697255435
+Sun Oct 15 2023 07:47:37 GMT+0800 (Singapore Standard Time),857,Singapore,15/10/2023,1.3500381,1 Bukit Batok Central Link,103.74918,,Overhanging tree,1697356057
+Mon Oct 23 2023 19:16:32 GMT+0800 (Singapore Standard Time),322,Singapore,23/10/2023,1.303344,50 East Coast Road,103.904604,,Overhanging tree,1698088592
+Wed Oct 18 2023 16:38:54 GMT+0800 (Singapore Standard Time),110,Singapore,18/10/2023,1.3500381,1 Bukit Batok Central Link,103.74918,,Overhanging Branch,1697647134
+Wed Oct 18 2023 09:25:29 GMT+0800 (Singapore Standard Time),971,Singapore,18/10/2023,1.304503,"501 Orchard Rd #03-15, 238880",103.830403,,Overhanging Branch,1697621129
+Sun Oct 15 2023 22:59:40 GMT+0800 (Singapore Standard Time),500,Singapore,15/10/2023,1.318513,326 Thomson Rd,103.843717,,Overhanging Branch,1697410780
+Mon Oct 16 2023 07:04:10 GMT+0800 (Singapore Standard Time),230,Singapore,16/10/2023,1.2919,"B Connaught Drive,South Eastern Asia,Singapore-All Locations",103.854,,Overhanging Branch,1697439850
+Mon Oct 16 2023 19:54:46 GMT+0800 (Singapore Standard Time),787,Singapore,16/10/2023,1.338205,Lornie Rd,103.819871,,Overhanging tree,1697486086
+Wed Oct 11 2023 23:04:10 GMT+0800 (Singapore Standard Time),822,Singapore,11/10/2023,1.290667,Robertson Quay,103.83976,,Overhanging Branch,1697065450
+Mon Oct 23 2023 11:46:56 GMT+0800 (Singapore Standard Time),582,Singapore,23/10/2023,1.318513,326 Thomson Rd,103.843717,,Overhanging tree,1698061616
+Sat Oct 14 2023 16:59:08 GMT+0800 (Singapore Standard Time),133,Singapore,14/10/2023,1.309637,19 Desker Rd,103.854296,,Overhanging Branch,1697302748
+Mon Oct 23 2023 17:13:36 GMT+0800 (Singapore Standard Time),653,Singapore,23/10/2023,1.300588,Orchard Central 11th Floor,103.839973,,Overhanging Branch,1698081216
+Sun Oct 15 2023 18:50:09 GMT+0800 (Singapore Standard Time),754,Singapore,15/10/2023,1.296601,"36 Purvis Street, #05-05. Singapore 188613",103.854944,,Overhanging tree,1697395809
+Thu Oct 19 2023 11:26:10 GMT+0800 (Singapore Standard Time),322,Singapore,19/10/2023,1.280887,23 Ann Siang Rd,103.845837,,Overhanging Branch,1697714770
+Sat Oct 21 2023 21:35:56 GMT+0800 (Singapore Standard Time),138,Singapore,21/10/2023,1.32846,136 Bedok North Avenue 3,103.935058,,Overhanging Branch,1697924156
+Fri Oct 20 2023 20:48:31 GMT+0800 (Singapore Standard Time),142,Singapore,20/10/2023,1.317711,Thomson Rd,103.843491,,Overhanging Branch,1697834911
+Sun Oct 15 2023 06:16:57 GMT+0800 (Singapore Standard Time),376,Singapore,15/10/2023,1.290667,Robertson Quay,103.83976,,Overhanging Branch,1697350617
+Thu Oct 12 2023 05:26:57 GMT+0800 (Singapore Standard Time),698,Singapore,12/10/2023,1.370627,"712 Ang Mo Kio Avenue 6, 561712",103.848033,,Overhanging Branch,1697088417
+Sat Oct 21 2023 20:10:58 GMT+0800 (Singapore Standard Time),623,Singapore,21/10/2023,1.298893,1 Fusionopolis Way,103.78767,,Overhanging tree,1697919058
+Sun Oct 15 2023 12:45:10 GMT+0800 (Singapore Standard Time),238,Singapore,15/10/2023,1.318729,1013 Geylang East Avenue 3,103.890366,,Overhanging Branch,1697373910
+Wed Oct 11 2023 19:30:47 GMT+0800 (Singapore Standard Time),555,Singapore,11/10/2023,1.33318,2 Jurong East Central 1,103.740113,,Overhanging tree,1697052647
+Mon Oct 09 2023 23:28:08 GMT+0800 (Singapore Standard Time),44,Singapore,9/10/2023,1.291515,177 River Valley Road,103.844714,,Overhanging Branch,1696894088
+Sat Oct 14 2023 19:33:36 GMT+0800 (Singapore Standard Time),487,Singapore,14/10/2023,1.340585,211 Lorong 8 Toa Payoh,103.853797,,Overhanging Branch,1697312016
+Fri Oct 13 2023 05:01:20 GMT+0800 (Singapore Standard Time),311,Singapore,13/10/2023,1.392359,10 Tebing Lane,103.915391,,Overhanging tree,1697173280
+Wed Oct 11 2023 22:02:23 GMT+0800 (Singapore Standard Time),623,Singapore,11/10/2023,1.300588,Orchard Central 11th Floor,103.839973,,Overhanging Branch,1697061743
+Sat Oct 21 2023 04:31:29 GMT+0800 (Singapore Standard Time),227,Singapore,21/10/2023,1.270592,10 Bukit Thermin Road,103.807136,,Overhanging Branch,1697862689
+Sun Oct 15 2023 00:13:12 GMT+0800 (Singapore Standard Time),317,Singapore,15/10/2023,1.304155,"29, Mayo Street #01-02, Singapore 208315.",103.853474,,Overhanging Branch,1697328792
+Mon Oct 09 2023 12:20:53 GMT+0800 (Singapore Standard Time),961,Singapore,9/10/2023,1.26389,Harbour Front Centre,103.819832,,Overhanging Branch,1696854053
+Wed Oct 11 2023 08:27:47 GMT+0800 (Singapore Standard Time),282,Singapore,11/10/2023,1.304503,"501 Orchard Rd #03-15, 238880",103.830403,,Overhanging Branch,1697012867
+Wed Oct 18 2023 16:40:47 GMT+0800 (Singapore Standard Time),675,Singapore,18/10/2023,1.305425,Little India Music Centre,103.851764,,Overhanging tree,1697647247
+Tue Oct 10 2023 23:31:09 GMT+0800 (Singapore Standard Time),239,Singapore,10/10/2023,1.318513,326 Thomson Rd,103.843717,,Overhanging Branch,1696980669
+Sat Oct 21 2023 18:06:02 GMT+0800 (Singapore Standard Time),994,Singapore,21/10/2023,1.280826,"138 Cecil St, #01-01, Singapore 069538",103.848885,,Overhanging Branch,1697911562
+Thu Oct 12 2023 02:24:57 GMT+0800 (Singapore Standard Time),596,Singapore,12/10/2023,1.305096,1202 East Coast Parkway,103.929756,,Overhanging Branch,1697077497
+Mon Oct 16 2023 03:37:43 GMT+0800 (Singapore Standard Time),997,Singapore,16/10/2023,1.303795,"290 Orchard Road, #15-07/08, Paragon 238859",103.835853,,Overhanging Branch,1697427463
+Sat Oct 21 2023 00:04:07 GMT+0800 (Singapore Standard Time),746,Singapore,21/10/2023,1.309637,19 Desker Rd,103.854296,,Overhanging Branch,1697846647
+Mon Oct 16 2023 05:19:44 GMT+0800 (Singapore Standard Time),284,Singapore,16/10/2023,1.304503,"501 Orchard Rd #03-15, 238880",103.830403,,Overhanging tree,1697433584
+Sun Oct 15 2023 06:35:06 GMT+0800 (Singapore Standard Time),710,Singapore,15/10/2023,1.291515,177 River Valley Road,103.844714,,Overhanging Branch,1697351706
+Sat Oct 21 2023 01:42:47 GMT+0800 (Singapore Standard Time),451,Singapore,21/10/2023,1.303344,50 East Coast Road,103.904604,,Overhanging tree,1697852567
+Sat Oct 21 2023 05:49:02 GMT+0800 (Singapore Standard Time),859,Singapore,21/10/2023,1.2933,1 Raffles Boulevard,103.85731,,Overhanging tree,1697867342
+Mon Oct 23 2023 12:03:19 GMT+0800 (Singapore Standard Time),449,Singapore,23/10/2023,1.297588,100 Victoria St,103.854308,,Overhanging tree,1698062599
+Sat Oct 14 2023 11:17:06 GMT+0800 (Singapore Standard Time),606,Singapore,14/10/2023,1.351994,Airport Blvd,103.984344,,Overhanging Branch,1697282226
+Sun Oct 22 2023 23:50:53 GMT+0800 (Singapore Standard Time),476,Singapore,22/10/2023,1.2933,1 Raffles Boulevard,103.85731,,Overhanging Branch,1698018653
+Tue Oct 17 2023 19:27:14 GMT+0800 (Singapore Standard Time),73,Singapore,17/10/2023,1.308729,70 Jellicoe Roa,103.86308,,Overhanging Branch,1697570834
+Tue Oct 17 2023 11:17:11 GMT+0800 (Singapore Standard Time),488,Singapore,17/10/2023,1.316557,21 Gloucester Rd,103.849886,,Overhanging Branch,1697541431
+Mon Oct 23 2023 01:20:16 GMT+0800 (Singapore Standard Time),134,Singapore,23/10/2023,1.292088,"9 Raffles Boulevard, #02-38 Millenia Walk,Singapore 039596",103.86033,,Overhanging Branch,1698024016
+Mon Oct 23 2023 17:45:17 GMT+0800 (Singapore Standard Time),520,Singapore,23/10/2023,1.298893,1 Fusionopolis Way,103.78767,,Overhanging Branch,1698083117
+Thu Oct 12 2023 18:40:46 GMT+0800 (Singapore Standard Time),751,Singapore,12/10/2023,1.291515,177 River Valley Road,103.844714,,Overhanging Branch,1697136046
+Tue Oct 10 2023 23:06:47 GMT+0800 (Singapore Standard Time),767,Singapore,10/10/2023,1.306752,163 Tanglin Rd,103.82628,,Overhanging Branch,1696979207
+Mon Oct 09 2023 08:28:07 GMT+0800 (Singapore Standard Time),396,Singapore,9/10/2023,1.300588,Basil Alcove,103.851818,,Overhanging Branch,1696840087
+Sat Oct 21 2023 16:58:14 GMT+0800 (Singapore Standard Time),461,Singapore,21/10/2023,1.37068,107 Ang Mo Kio Street 11,103.838948,,Overhanging Branch,1697907494
+Sun Oct 22 2023 23:56:02 GMT+0800 (Singapore Standard Time),270,Singapore,22/10/2023,1.294903,30 Victoria Street #02-01 Singapore 187996,103.852408,,Overhanging Branch,1698018962
+Tue Oct 10 2023 20:54:45 GMT+0800 (Singapore Standard Time),195,Singapore,10/10/2023,1.305425,Little India Music Centre,103.851764,,Overhanging Branch,1696971285
+Mon Oct 16 2023 04:09:16 GMT+0800 (Singapore Standard Time),287,Singapore,16/10/2023,1.271273,109 Mount Faber,103.819299,,Overhanging Branch,1697429356
+Mon Oct 16 2023 06:46:30 GMT+0800 (Singapore Standard Time),981,Singapore,16/10/2023,1.301594,22 Cuppage Rd,103.840138,,Overhanging tree,1697438790
+Fri Oct 20 2023 17:19:47 GMT+0800 (Singapore Standard Time),633,Singapore,20/10/2023,1.301594,22 Cuppage Rd,103.840138,,Overhanging tree,1697822387
+Tue Oct 17 2023 00:07:29 GMT+0800 (Singapore Standard Time),381,Singapore,17/10/2023,1.303344,50 East Coast Road,103.904604,,Overhanging Branch,1697501249
+Tue Oct 17 2023 18:04:14 GMT+0800 (Singapore Standard Time),317,Singapore,17/10/2023,1.307605,"Scotts Square, 6 Scotts Rd Singapore 228209",103.832599,,Overhanging tree,1697565854
+Fri Oct 13 2023 16:50:17 GMT+0800 (Singapore Standard Time),758,Singapore,13/10/2023,1.296864,501 Stirling Rd,103.800775,,Overhanging Branch,1697215817
+Tue Oct 10 2023 11:27:38 GMT+0800 (Singapore Standard Time),139,Singapore,10/10/2023,1.357918,"Crowne Plaza #01-02, Changi Airport Terminal Tree",103.986922,,Overhanging Branch,1696937258
+Fri Oct 13 2023 01:02:14 GMT+0800 (Singapore Standard Time),813,Singapore,13/10/2023,1.296601,"36 Purvis Street, #05-05. Singapore 188613",103.854944,,Overhanging Branch,1697158934
+Fri Oct 13 2023 01:00:18 GMT+0800 (Singapore Standard Time),948,Singapore,13/10/2023,1.28104,Raffles Quay,103.850917,,Overhanging Branch,1697158818
+Sun Oct 15 2023 02:54:28 GMT+0800 (Singapore Standard Time),406,Singapore,15/10/2023,1.32483,799 New Upper Changi Road,103.93248,,Overhanging Branch,1697338468
+Wed Oct 11 2023 00:32:14 GMT+0800 (Singapore Standard Time),770,Singapore,11/10/2023,1.279924,260 Marina Way,103.869499,,Overhanging Branch,1696984334
+Fri Oct 13 2023 19:05:36 GMT+0800 (Singapore Standard Time),926,Singapore,13/10/2023,1.280887,23 Ann Siang Rd,103.845837,,Overhanging Branch,1697223936
+Mon Oct 09 2023 10:22:04 GMT+0800 (Singapore Standard Time),488,Singapore,9/10/2023,1.318729,1013 Geylang East Avenue 3,103.890366,,Overhanging Branch,1696846924
+Sat Oct 14 2023 10:05:29 GMT+0800 (Singapore Standard Time),203,Singapore,14/10/2023,1.300588,Orchard Central 11th Floor,103.839973,,Overhanging Branch,1697277929
+Sun Oct 22 2023 05:42:25 GMT+0800 (Singapore Standard Time),856,Singapore,22/10/2023,1.318513,326 Thomson Rd,103.843717,,Overhanging Branch,1697953345
+Wed Oct 18 2023 19:44:09 GMT+0800 (Singapore Standard Time),269,Singapore,18/10/2023,1.392359,10 Tebing Lane,103.915391,,Overhanging Branch,1697658249
+Wed Oct 11 2023 17:05:20 GMT+0800 (Singapore Standard Time),262,Singapore,11/10/2023,1.318513,326 Thomson Rd,103.843717,,Overhanging Branch,1697043920
+Tue Oct 10 2023 15:56:11 GMT+0800 (Singapore Standard Time),862,Singapore,10/10/2023,1.392359,10 Tebing Lane,103.915391,,Overhanging tree,1696953371
+Mon Oct 16 2023 20:34:19 GMT+0800 (Singapore Standard Time),683,Singapore,16/10/2023,1.297588,100 Victoria St,103.854308,,Overhanging Branch,1697488459
+Fri Oct 20 2023 17:44:33 GMT+0800 (Singapore Standard Time),26,Singapore,20/10/2023,1.30619,"International Building 360 Orchard Rd, 238869",103.83108,,Overhanging Branch,1697823873
+Mon Oct 09 2023 17:38:56 GMT+0800 (Singapore Standard Time),495,Singapore,9/10/2023,1.305425,Little India Music Centre,103.851764,,Overhanging Branch,1696873136
+Fri Oct 20 2023 14:27:21 GMT+0800 (Singapore Standard Time),291,Singapore,20/10/2023,1.33318,2 Jurong East Central 1,103.740113,,Overhanging Branch,1697812041
+Thu Oct 19 2023 23:33:40 GMT+0800 (Singapore Standard Time),727,Singapore,19/10/2023,1.296601,"36 Purvis Street, #05-05. Singapore 188613",103.854944,,Overhanging Branch,1697758420
+Sat Oct 21 2023 01:09:53 GMT+0800 (Singapore Standard Time),755,Singapore,21/10/2023,1.305565,1206a East Coast Park,103.931076,,Overhanging Branch,1697850593
+Tue Oct 17 2023 07:07:36 GMT+0800 (Singapore Standard Time),259,Singapore,17/10/2023,1.256752,"8 Sentosa Gateway, Sentosa Island",103.820331,,Overhanging Branch,1697526456

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body onload="display_ct()" style="background-color: rgb(194, 255, 220);">
+
+    <img src="../images/9.png" class="absolute top-0">
+    <img src="../images/2.png" class="absolute top-3 right-4">
+
+    <div class="flex items-center justify-center h-screen">
+
+        <div style="width: 720px; height: 640px;"
+            class="absolute p-6 bg-white border border-gray-200 rounded-lg shadow">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Overhanging Branch Detection</h5>
+
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Overhanging Branch or Clear Road
+            </p>
+
+            <div class="flex items-center justify-center mb-4">
+                <div id="webcam-container"></div>
+            </div>
+
+            <div id="datetime" class="font-bold text-black"></div>
+            <div id="location" class="font-bold text-black"></div>
+            <div id="label-container"></div>
+            <div id="result" class="mb-4 font-bold text-red-600"></div>
+
+            <button type="button" onclick="init()" id="startButton"
+                class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Start</button>
+        </div>
+    </div>
+
+
+    <!-- FLOWBITE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    // More API functions here:
+    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+    // the link to your model provided by Teachable Machine export panel
+    const URL = "https://teachablemachine.withgoogle.com/models/Ey8-q9lQK/";
+
+    let model, webcam, labelContainer, maxPredictions;
+
+    // Load the image model and setup the webcam
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // or files from your local hard drive
+        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // Convenience function to setup a webcam
+        const flip = true; // whether to flip the webcam
+        webcam = new tmImage.Webcam(600, 360, flip); // width, height, flip
+        await webcam.setup(); // request access to the webcam
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        // append elements to the DOM
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+
+        labelContainer = document.getElementById("label-container"); // GET RESULTS HERE //
+        for (let i = 0; i < maxPredictions; i++) { // and class labels
+            labelContainer.appendChild(document.createElement("div"));
+        }
+        // description
+        document.getElementById("startButton").hidden = true;
+        document.getElementById("location").innerHTML = "Location: " + globalformattedAdd;
+
+    }
+
+    async function loop() {
+        webcam.update(); // update the webcam frame
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+
+    // run the webcam image through the image model
+    // GLOBAL VARIABLE 
+    var oldkeepTrackResult = "Clear Road"
+    var keepTrackResult = "Clear Road"
+    var currentdate = new Date();
+    var gloablLat = "";
+    var globalLong = "";
+    var globalPostalCode = "";
+    var globalBusStopsCode = [];
+    var globalformattedAdd = "";
+    var globalBus = []
+
+    async function predict() {
+        // predict can take in an image, video or canvas html element
+        const prediction = await model.predict(webcam.canvas)
+
+        // prediction model result 
+        var tempStore = {};
+        var defaultValue = "Clear Road";
+
+        for (let i = 0; i < maxPredictions; i++) {
+            const classPrediction =
+                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            labelContainer.childNodes[i].innerHTML = classPrediction;
+
+            // update dictionary
+            tempStore[prediction[i].className] = prediction[i].probability.toFixed(2)
+        }
+
+        if (tempStore["Overhanging Branch"] > tempStore["Clear Road"] && tempStore["Overhanging Branch"] >= 0.9) {
+            // CALL THE SEND EMAIL FUNCTION at backend
+            let toShow = "Result: Overhanging Branch"
+            document.getElementById("result").innerHTML = toShow
+
+            keepTrackResult = "Overhanging Branch"
+        } else if (tempStore["Clear Road"] >= 0.9) {
+            let toShow = "Result: Clear Road"
+            document.getElementById("result").innerHTML = toShow
+
+            keepTrackResult = "Clear Road"
+        }
+    }
+
+    // function to handle success
+    function success() {
+        var data = JSON.parse(this.responseText); //parse the string to JSON
+        console.log(data["data"]);
+
+        for (i in data["data"]) {
+            let code = data["data"][i]["code"]
+            globalBusStopsCode.push(code)
+        }
+    }
+
+    // function to handle error
+    function error(err) {
+        console.log('Request Failed', err); //error details will be in the "err" object
+    }
+
+    function getBuStopCode() {
+        var url = "https://api.stb.gov.sg/services/transport/v2/bus-stops?location=" + gloablLat + "," + globalLong
+
+        var xhr = new XMLHttpRequest(); //invoke a new instance of the XMLHttpRequest
+        xhr.onload = success; // call success function if request is successful
+        xhr.onerror = error; // call error function if request failed
+        xhr.open('GET', url); // open a GET request
+        xhr.setRequestHeader("X-API-Key", "")
+        xhr.send(); // send the request to the server.
+    }
+
+
+    function sendEmail() {
+        console.log("email send")
+        var location = document.getElementById("location").innerText.substring(10, );
+
+        console.log(globalBusStopsCode)
+        Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "iotonlyg2.6@gmail.com",
+                Password: "", // TO BE ADDED FROM node_modules/env folder
+                To: 'iotonlyg2.6@gmail.com',
+                From: "iotonlyg2.6@gmail.com",
+                Subject: "[ACTION NEEDED] Overhanging Branch Detected",
+                Body: `
+                <html>
+                <head>
+                    <title></title>
+                    <link href="https://svc.webspellchecker.net/spellcheck31/lf/scayt3/ckscayt/css/wsc.css" rel="stylesheet" type="text/css" />
+                </head>
+                <body>Dear Sir/Mdm,<br />
+                    <br />
+                    There has been a detection of overhanging branches at location <strong>${location}</strong>. Please take the following actions&nbsp;as soon as possible to prevent incidents from happening. Thank you.<br />
+                    &nbsp;
+                    <hr /><br />
+                    <strong>[For Action] </strong>Contact NParks&nbsp;to remove the overhanging branches.<br />
+                    Contact Number:&nbsp;1800-476-1600<br />
+                    Email: www.nparks.gov.sg/feedback<br />
+                    <br />
+                    <strong>[For Action]</strong>&nbsp;Buses from these bus stop codes will be affected by the incident, please alert bus drivers to be careful.
+                    <br/>
+                        ${" ".concat(globalBusStopsCode)}
+                    <br />
+                    <br />
+                    Best Regards,<br />
+                    BranchWatch Team
+                    <div>
+                    <div>&nbsp;</div>
+
+                    <div>&nbsp;</div>
+                    </div>
+                </body>
+                </html>
+                `,
+            })
+            .then(function (message) {
+                alert("Email sent successfully")
+            });
+    }
+
+    // TO ENSURE THAT IT DOES NOT SPAM EMAILS
+    setInterval(function () {
+        checkForChanges(); // after every 5 min check
+        oldkeepTrackResult =
+            keepTrackResult; // reset the old value now to the new one, so during next check we should have our myVar changed.
+    }, 3000);
+
+    function checkForChanges() {
+        console.log("called")
+        if (oldkeepTrackResult === keepTrackResult) {
+            //alert('same value nothing has changed!!');
+        } else if (oldkeepTrackResult != keepTrackResult && keepTrackResult == "Overhanging Branch") {
+            getBuStopCode()
+
+            sendEmail();
+            sendData();
+        }
+    }
+
+    function getNowLocation() {
+        if (document.getElementById("location").innerText.substring(10, ) != globalformattedAdd ||
+            globalformattedAdd == "") {
+            getLocation();
+        }
+    }
+
+    getNowLocation();
+
+    // SNED INFORMTATION TO DYNAMODB
+    function sendData() {
+        var datetime = document.getElementById("datetime").innerText.substring(12, )
+        // DATE FORMAT
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+        const formattedToday = dd + '/' + mm + '/' + yyyy;
+        const newDate = formattedToday;
+
+        var busNumber = Math.floor(Math.random() * (999 - 100 + 1) + 100);
+        var result = "Overhanging Branch"
+        var params = new URLSearchParams({
+            location: document.getElementById("location").innerText.substring(10, ),
+            result: result,
+            datetime: datetime,
+            date: newDate,
+            bus: busNumber,
+            long: globalLong,
+            lat: gloablLat,
+            postalCode: globalPostalCode,
+            timestamp: Math.floor(Date.now() / 1000),
+            country: "Singapore",
+        })
+
+
+        let headers = new Headers();
+
+        headers.append('Content-Type', 'application/json');
+        headers.append('Origin', 'http://localhost');
+
+        var url = "https://n210r5igz1.execute-api.ap-southeast-1.amazonaws.com/prod?" + params
+
+        fetch(url, {
+                mode: 'no-cors',
+                credentials: 'include',
+                method: 'POST',
+                headers: headers
+            })
+            .then(response => response.data())
+            .catch(error => console.log(error.message));
+    }
+
+    // GET LOCATION
+    function getLocation() {
+        if (!navigator.geolocation) {
+            console.log("Geolocation is not supported by your browser");
+            return;
+        }
+
+        function success(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            gloablLat = latitude;
+            globalLong = longitude;
+
+            return reverseGeocodingWithGoogle(latitude, longitude);
+        }
+
+        function error() {
+            console.log("Unable to retrieve your location");
+        }
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
+
+    // GEOAPIFY
+    function reverseGeocodingWithGoogle(latitude, longitude) {
+        var formmattedAdd = ""
+        var api_key = "" //HERE
+        var requestOptions = {
+            method: 'GET',
+        };
+        fetch(
+                `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${api_key}`,
+                requestOptions)
+            .then(response => {
+                var result2 = response.json();
+                result2.then(value => {
+                    formmattedAdd = value.features[0].properties.formatted;
+                    globalformattedAdd = formmattedAdd;
+                    globalPostalCode = value.features[0].properties.postcode;
+                }).catch(err => {
+                    console.log(err);
+                });
+            })
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    // DISPLAY TIME
+    function display_c() {
+        var refresh = 1000; // Refresh rate in milli seconds
+        mytime = setTimeout('display_ct()', refresh)
+    }
+
+    function display_ct() {
+        var x = new Date()
+        var x1 = x.toString(); // changing the display to UTC string
+        document.getElementById('datetime').innerHTML = "Date & Time: " + x1;
+        tt = display_c();
+    }
+</script>

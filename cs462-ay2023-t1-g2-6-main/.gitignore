@@ -1,0 +1,5 @@
+rear_cam/config.json
+rear_cam/apps_pw_config.json
+# Exclude virtual environment directory
+rear_cam/myenv/
+node_modules
